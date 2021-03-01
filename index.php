@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<?php include('db.php') ?>
+<html >
     <head>
         <meta charset="utf-8">
         <title>ex-dischi-musicali</title>
@@ -28,12 +28,15 @@
            <!-- sezione dischi -->
             <div class="cds-container container">
             <!-- Disco ad esempio -->
-                <div    class="cd">  
-                    <img src="" alt="">
-                    <h3></h3>
-                    <span class="author"></span>
-                    <span class="year"></span>
+                  <?php
+                      foreach($db as $disco){  ?>
+                <div class="cd">    
+                    <img src="<?php echo $disco["img"] ?>" alt="">
+                    <h3><?php echo $disco["title"] ?></h3>
+                    <span class="author"><?php echo $disco["author"] ?></span>
+                    <span class="year"><?php echo $disco["data"] ?></span>
                 </div>
+                <?php }?>
                 
             </div>
         </div>
