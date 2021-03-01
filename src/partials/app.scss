@@ -1,0 +1,82 @@
+#app{
+     .tools{
+         padding: 30px 10px ;
+        display: flex;
+        justify-content: flex-end;
+        
+         input{
+            outline-style: none;
+            box-shadow: none;
+            background-color: transparent;
+            border-color: transparent;
+            border-bottom:2px solid grey ;
+            color: white;
+            font-size: 18px;
+        &::placeholder{
+            font-weight: 200;
+            color: white;
+            font-size: 18px;
+            }
+        }
+         select{
+            width: 100px;
+            outline-style: none;
+            box-shadow: none;
+            border-color: transparent;
+            font-size: 15px;
+        }   
+    }
+    .cds-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 100px 0;
+    
+     .cd {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        flex-basis: 200px;
+        padding: 20px;
+        margin: 10px 20px;
+        height: 360px;
+        background: rgb(46, 58, 70);
+        text-align: center;
+        & img {
+            max-width: 100%;
+        }
+        & h3 {
+            margin: 20px 0;
+            color: white;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+    
+        & span.author {
+            color: grey;
+            font-size: 20px;
+        }
+    
+        & span.year {
+            color: grey;
+        }
+
+
+
+}
+
+
+    
+}
+    
+   
+    
+    
+ 
+ 
+
+
+
+}
