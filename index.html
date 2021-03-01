@@ -28,7 +28,7 @@
            <!-- sezione dischi -->
             <div class="cds-container container">
             <!-- Disco ad esempio -->
-                <div v-for="disco in dischi" v-for="disco in dischi" v-if="select=='all'|| disco.genre == select"   class="cd">  
+                <div    class="cd">  
                     <img :src="disco.poster" alt="">
                     <h3>{{disco.title}}</h3>
                     <span class="author">{{disco.author}}</span>
