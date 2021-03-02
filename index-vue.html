@@ -1,5 +1,4 @@
-<?php include __DIR__ . '../php/db.php'; ?>
-<html >
+<html>
     <head>
         <meta charset="utf-8">
         <title>ex-dischi-musicali</title>
@@ -19,30 +18,27 @@
         <div id="app">
             <!-- sezione tools -->
            <div class="tools">
-          
-                <select v-model="select">
-                    <option >Work in progress</option>
+                <select v-model="query">
+                    <option value="all">All</option>
+                    <option v-for="element in categorie" :value="element">{{element}}</option>
                 </select>
              
            </div> 
            <!-- sezione dischi -->
             <div class="cds-container container">
-            <!-- Disco ad esempio -->
-                  <?php
-                      foreach($db as $disco){  ?>
-                <div class="cd">    
-                    <img src="<?php echo $disco["img"] ?>" alt="">
-                    <h3><?php echo $disco["title"] ?></h3>
-                    <span class="author"><?php echo $disco["author"] ?></span>
-                    <span class="year"><?php echo $disco["data"] ?></span>
+                <div v-for="element in elementdb" v-if="query=='all'|| query==element.type" class="cd">    
+                    <img :src="element.img" alt="">
+                    <h3>{{element.title}}</h3>
+                    <span class="author">{{element.author}}</span>
+                    <span class="year">{{element.data}}</span>
                 </div>
-                <?php }?>
+            
                 
             </div>
         </div>
     
         
 
-        <script src="js/scipt.js" charset="utf-8"></script>
+        <script src="js/vue.js" charset="utf-8"></script>
     </body>
 </html>
